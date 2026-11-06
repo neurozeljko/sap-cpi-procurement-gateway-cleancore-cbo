@@ -1,0 +1,14 @@
+<PolicySet name="ProcurementGatewayEdgePolicies">
+    <VerifyAPIKey async="false" continueOnError="false" enabled="true">
+        <Header name="apiKey"/>
+    </VerifyAPIKey>
+    <JSONThreatProtection async="false" continueOnError="false" enabled="true">
+        <ArrayElementCount>100</ArrayElementCount>
+        <ContainerEntryCount>50</ContainerEntryCount>
+        <ObjectEntryCount>50</ObjectEntryCount>
+        <StringValueLength>500</StringValueLength>
+    </JSONThreatProtection>
+    <SpikeArrest async="false" continueOnError="false" enabled="true">
+        <Rate>30pm</Rate>
+    </SpikeArrest>
+</PolicySet>
